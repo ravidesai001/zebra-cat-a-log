@@ -12,8 +12,8 @@ function App() {
     <Router>
       <div className="App">
         <Switch>
-          <Route path = "/" component={Home} />
-          <Route path = "/add" component={Add}></Route>
+          <Route path = "/" exact component={Home} />
+          <Route path = "/add" component={Add} />
         </Switch>
       </div>
     </Router>
@@ -30,6 +30,7 @@ function Home(){
 
   return(
     <div className="App">
+      <Nav />
       <ul style={{listStyleType: "none"}}>
         {cards}
       </ul>
